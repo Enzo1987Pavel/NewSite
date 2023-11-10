@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title>Ошибка загрузки</title>
 </head>
+
+<style>
+    h1, h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+    p {
+        size:16px;
+        text-align: center;
+    }
+</style>
+
 <body>
 
   <h1>Страница не найдена!</h1>
   <h3>То, что вы искали, просто не существует.</h3>
-  <p>Для продолжения перейдите на  <a href="/" title="нажмите, чтобы перейти"> главную</a> страницу сайта</p>
+  <p>Для продолжения перейдите на  <a href="{{ url_for("main_page") }}" title="нажмите, чтобы перейти"> главную</a> страницу сайта</p>
 
 </body>
 </html>
