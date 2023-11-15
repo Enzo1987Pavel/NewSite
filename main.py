@@ -7,12 +7,17 @@ menu = ["Установка", "Первое приложение", "Обратн
 
 @app.route("/")
 def main_page():
-    return render_template("index.html", name="index", title="Главная", menu=menu)
+    return render_template("index.html", name="index", title="Главная")  # , menu=menu)
 
 
 @app.route("/about")
 def about_page():
-    return render_template("about.html", name="about", title="О сайте")
+    return render_template("about.html", name="about", title="О сайте")  # , menu=menu)
+
+
+@app.route("/aboutapp")
+def about_app_page():
+    return render_template("about_app.html", name="about_app", title="О приложении")  # , menu=menu)
 
 
 @app.errorhandler(404)  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
@@ -26,4 +31,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

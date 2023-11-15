@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ошибка загрузки</title>
+    <title>Ошибка загрузки страницы!</title>
 </head>
 
 <style>
-    h1, h3 {
+    html {
+        background-color: #dcecf9;
+    }
+    h1 {
         text-align: center;
         font-weight: bold;
+        padding-top: 10px;
     }
     p {
         size:16px;
         text-align: center;
+        font-weight: bold;
     }
 </style>
 
 <body>
-
-  <h1>Страница не найдена!</h1>
-  <h3>То, что вы искали, просто не существует.</h3>
-  <p>Для продолжения перейдите на  <a href="{{ url_for("main_page") }}" title="нажмите, чтобы перейти"> главную</a> страницу сайта</p>
+    <h1>Страница не найдена!</h1>
+    <p><img src="https://s8d6.turboimg.net/t1/95552122_404.jpg" alt="404 error" /></p>
+    <p>То, что вы искали, просто не существует.</p>
+    <p>Для продолжения перейдите на  <a href="{{ url_for("main_page") }}" title="нажмите, чтобы перейти"> главную</a> страницу сайта</p>
 
 </body>
 </html>

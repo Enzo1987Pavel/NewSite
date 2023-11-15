@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
     {% block title -%}
-    {% if title %}
-             <title>Про Flask - {{title}}</title>
-    {% else %}
-             <title>Про Flask</title>
-    {% endif %}
+        {% if title %}
+            <title>Классификатор - {{title}}</title>
+        {% else %}
+            <title>Классификатор</title>
+        {% endif %}
     {% endblock %}
 
 <!--icon -->
@@ -18,23 +20,110 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 <!--icon -->
+
+<style class="text/css">
+    table {
+        alignment: center;
+        margin: auto;  /* center of the table */
+        border-collapse: separate; /* separate between cells */
+        border-spacing: 15px; /* separate between cells (range) */
+        width: 95%; /* width of the column */
+    }
+    TD {
+        text-align: center;
+        align: center;
+        border: 20px;
+    }
+    #col00 {
+        width: 95%; /* Ширина нульнулевой колонки */
+        {#background: rgba(236, 64, 255, 0.99); /* Цвет фона нулевой колонки */#}
+        vertical-align: center;
+        text-align: left;
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+        font-size: 24px;
+        font-weight: bold;
+        background: rgb(0,156,174);
+        background: linear-gradient(90deg, rgba(0,156,174,1) 0%, rgba(73,9,121,1) 35%, rgba(201,0,255,0.8240429961046919) 100%);
+    }
+    #col0 {
+        width: 95%; /* Ширина нулевой колонки */
+        background: rgba(64, 116, 255, 0.99);
+        color: rgba(255, 255, 255, 0.99);
+        vertical-align: center; /* Цвет фона нулевой колонки */
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #col1 {
+        width: 20%; /* Ширина первой колонки */
+        background: #fc0; /* Цвет фона первой колонки */
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+    }
+    .TextInColumn {
+        font-weight: bold;
+        {#color: red;#}
+        font-size: 20px;
+    }
+
+    #col2 {
+        width: 60%; /* Ширина второй колонки */
+        background: #f0f0f0; /* Цвет фона второй колонки */
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+    }
+    #col3 {
+        width: 20%; /* Ширина третьей колонки */
+        background: #fc0; /* Цвет фона третьей колонки */
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+    }
+    a {
+        font-weight: lighter;
+        text-decoration: underline;
+        color: rgba(0,0,0,.7);
+    }
+    a:hover {
+        color: #005a9d;
+        cursor: pointer;
+    }
+
+html
+    {
+        background: url(https://s8d3.turboimg.net/t1/95546669_bg_01.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+</style>
+
 </head>
 
 <body>
+
+
 {% block content -%}
     {%- block mainmenu -%}
         <ul>
             {% for m in menu -%}
-        <li>{{m}}</li>
+                <li>{{m}}</li>
             {% endfor -%}
         </ul>
     {% endblock mainmenu -%}
 
-    {% if title -%}
-        <h1>{{title}}</h1>
-            {% else -%}
-        <h1>Про Flask</h1>
-            {% endif -%}
+{#    {% if title -%}#}
+{#        <h1>{{title}}</h1>#}
+{#    {% else -%}#}
+{#        <h1>Классификатор</h1>#}
+{#    {% endif -%}#}
 {% endblock -%}
 
 </body>
