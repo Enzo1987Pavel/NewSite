@@ -15,9 +15,9 @@ def about_page():
     return render_template("about.html", name="about", title="О сайте")  # , menu=menu)
 
 
-@app.route("/aboutapp")
+@app.route("/application")
 def about_app_page():
-    return render_template("about_app.html", name="about_app", title="О приложении")  # , menu=menu)
+    return render_template("application.html", name="application", title="О приложении")  # , menu=menu)
 
 
 @app.errorhandler(404)  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена

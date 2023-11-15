@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ super() }}
+    <div>Содержимое страницы &laquo;{{ title }}&raquo;</div><br><br>
+    <a href={{ url_for("main_page") }}>Back to main page</a>
+{% endblock %}

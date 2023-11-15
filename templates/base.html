@@ -36,26 +36,29 @@
     }
     #col00 {
         width: 95%; /* Ширина нульнулевой колонки */
-        {#background: rgba(236, 64, 255, 0.99); /* Цвет фона нулевой колонки */#}
+    {#background: rgba(236, 64, 255, 0.99); /* Цвет фона нулевой колонки */#}
         vertical-align: center;
         text-align: left;
         padding: 20px;
         border-radius: 10px 10px 10px 10px;
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
-        font-size: 24px;
+        font-size: 26px;
         font-weight: bold;
-        background: rgb(0,156,174);
-        background: linear-gradient(90deg, rgba(0,156,174,1) 0%, rgba(73,9,121,1) 35%, rgba(201,0,255,0.8240429961046919) 100%);
+        background: rgb(0, 156, 174);
+        background: linear-gradient(90deg, rgba(0, 156, 174, 1) 0%, rgba(73, 9, 121, 1) 35%, rgba(201, 0, 255, 0.824) 100%);
     }
     #col0 {
         width: 95%; /* Ширина нулевой колонки */
-        background: rgba(64, 116, 255, 0.99);
-        color: rgba(255, 255, 255, 0.99);
+        {#background: rgba(64, 116, 255, 0.99);#}
+        color: rgb(255, 255, 0);
+        text-shadow: 1px 0 rgb(128,128,128),2px 2px 1px rgba(0,0,0,1);
         vertical-align: center; /* Цвет фона нулевой колонки */
         border-radius: 10px 10px 10px 10px;
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
-        font-size: 18px;
+        font-size: 25px;
         font-weight: bold;
+        background: rgb(0,228,222);
+        background: linear-gradient(90deg, rgba(0,228,222,1) 0%, rgba(0,137,156,0.950) 61%, rgba(0,121,117,0.824) 100%);
     }
     #col1 {
         width: 20%; /* Ширина первой колонки */
@@ -94,8 +97,7 @@
         cursor: pointer;
     }
 
-html
-    {
+    html {
         background: url(https://s8d3.turboimg.net/t1/95546669_bg_01.png) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -103,12 +105,31 @@ html
         background-size: cover;
     }
 
+    body {
+        margin: 0;
+        color: #fff;
+        /* Растягиваем body по высоте html */
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .footer {
+        text-align: right;
+        font-weight: bold;
+        color: #005a9d;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
 </style>
 
 </head>
 
 <body>
-
 
 {% block content -%}
     {%- block mainmenu -%}
@@ -125,6 +146,11 @@ html
 {#        <h1>Классификатор</h1>#}
 {#    {% endif -%}#}
 {% endblock -%}
+
+
+    <div class="footer">
+        <div>&copy;&nbsp;Павел Есаулов</div>
+    </div>
 
 </body>
 </html>
