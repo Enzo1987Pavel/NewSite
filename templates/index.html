@@ -26,7 +26,12 @@
                 <div><a href={{ url_for("about_app_page") }}>О приложении</a></div>
             </td>
 
-            <td id="col2">Колонка 2-1</td>
+            <td id="col2">
+                <div>Колонка 2-1</div><br>
+                <div><a href="/images/DisplaySwitch.html/">Открыть файл</a></div><br>
+                <div>Колонка 2-2</div>
+            </td>
+
 
             <td id="col3">
                 <div class="TextInColumn">Колонка 3-1</div><br>
@@ -37,37 +42,3 @@
     </div>
 
 {% endblock %}
-
-
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    {% if title %}#}
-{#         <title>NewSite - {{title}}</title>#}
-{#    {% else %}#}
-{#         <title>NewSite</title>#}
-{#    {% endif %}#}
-{#<!--icon -->#}
-{#    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png">#}
-{#    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">#}
-{#    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon-16x16.png">#}
-{#    <link rel="manifest" href="/media/site.webmanifest">#}
-{#    <link rel="mask-icon" href="/media/safari-pinned-tab.svg" color="#5bbad5">#}
-{#    <meta name="msapplication-TileColor" content="#da532c">#}
-{#    <meta name="theme-color" content="#ffffff">#}
-{#<!--icon -->#}
-{##}
-{#</head>#}
-{##}
-{#<body>#}
-{#      <form action="/" method="get">#}
-{#          <label for="first_name">Имя:</label>#}
-{#          <input type="text" id="first_name" name="first_name_In" placeholder="Search W3Schools"><br><br>#}
-{#          <label for="second_name">Фамилия:</label>#}
-{#          <input type="text" id="second_name" name="second_name_In" placeholder="Search W3Schools"><br><br>#}
-{#          <button type="submit">Submit</button>#}
-{#          <button type="submit" formtarget="_blank">Submit to a new window</button><br><br>#}
-{#    </form>#}
-{#</body>#}
-{#</html>#}

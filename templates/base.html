@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     {% block title -%}
         {% if title %}
             <title>Классификатор - {{title}}</title>
@@ -34,6 +34,12 @@
         align: center;
         border: 20px;
     }
+    {#.box div {#}
+    {#    width: 90px;#}
+    {#    alignment: center;#}
+    {#    display: inline-block;#}
+    {#}#}
+
     #col00 {
         width: 95%; /* Ширина нульнулевой колонки */
     {#background: rgba(236, 64, 255, 0.99); /* Цвет фона нулевой колонки */#}
@@ -45,7 +51,7 @@
         font-size: 26px;
         font-weight: bold;
         background: rgb(0, 156, 174);
-        background: linear-gradient(90deg, rgba(0, 156, 174, 1) 0%, rgba(73, 9, 121, 1) 35%, rgba(201, 0, 255, 0.824) 100%);
+        background: linear-gradient(90deg, rgba(201, 0, 255, 1) 0%, rgba(73, 9, 121, 1) 35%, rgba(0, 156, 174, 0.824) 100%);
     }
     #col0 {
         width: 95%; /* Ширина нулевой колонки */
@@ -62,7 +68,7 @@
     }
     #col1 {
         width: 20%; /* Ширина первой колонки */
-        background: #fc0; /* Цвет фона первой колонки */
+        background: #e8ae08; /* Цвет фона первой колонки */
         padding: 10px;
         border-radius: 10px 10px 10px 10px;
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
@@ -82,19 +88,25 @@
     }
     #col3 {
         width: 20%; /* Ширина третьей колонки */
-        background: #fc0; /* Цвет фона третьей колонки */
+        background: #e8ae08; /* Цвет фона третьей колонки */
         padding: 10px;
         border-radius: 10px 10px 10px 10px;
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
     }
+    .linkToMain {
+        margin-left: 10px;
+    }
+
     a {
         font-weight: lighter;
-        text-decoration: underline;
-        color: rgba(0,0,0,.7);
+        cursor: default;
+        color: rgb(0, 43, 73);
+        text-decoration: none;
     }
     a:hover {
-        color: #005a9d;
+        color: rgb(0, 43, 73);
         cursor: pointer;
+        text-decoration: underline;
     }
 
     html {
@@ -107,7 +119,7 @@
 
     body {
         margin: 0;
-        color: #fff;
+        color: #000000;
         /* Растягиваем body по высоте html */
         min-height: 100%;
         display: grid;
@@ -118,7 +130,6 @@
         text-align: right;
         font-weight: bold;
         color: #005a9d;
-        margin-right: 10px;
         margin-bottom: 10px;
         position: absolute;
         bottom: 0;
@@ -133,13 +144,12 @@
 
 {% block content -%}
     {%- block mainmenu -%}
-        <ul>
-            {% for m in menu -%}
-                <li>{{m}}</li>
-            {% endfor -%}
-        </ul>
+{#        <ul>#}
+{#            {% for m in menu -%}#}
+{#                <li>{{m}}</li>#}
+{#            {% endfor -%}#}
+{#        </ul>#}
     {% endblock mainmenu -%}
-
 {#    {% if title -%}#}
 {#        <h1>{{title}}</h1>#}
 {#    {% else -%}#}
@@ -149,7 +159,7 @@
 
 
     <div class="footer">
-        <div>&copy;&nbsp;Павел Есаулов</div>
+        <div style="margin-right: 10px">&copy;&nbsp;Павел Есаулов</div>
     </div>
 
 </body>
