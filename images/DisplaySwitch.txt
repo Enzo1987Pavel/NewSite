@@ -1,0 +1,23 @@
+DISPLAYSWITCH.exe
+
+Specify which display to use and how to use it.
+
+Syntax
+      DISPLAYSWITCH /Option
+
+Options
+
+       /internal    Switch to use the primary display only.
+       1            All other connected displays will be disabled. 
+
+       /clone       The primary display will be mirrored on a second screen.
+       2        
+
+       /extend      Expand the Desktop to a secondary display.
+       3            This allows one desktop to span multiple displays. (Default).
+
+       /external    Switch to the external display only (second screen).
+       4            The current main display will be disabled.
+
+Running DisplaySwitch.exe without any options will open a GUI.
+The command is located at: "%SystemRoot%\System32\DisplaySwitch.exe"
