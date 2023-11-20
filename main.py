@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import urllib.request
 
 app = Flask(__name__)
 
@@ -8,6 +9,10 @@ menu = ["Установка", "Первое приложение", "Обратн
 @app.route("/")
 def main_page():
     return render_template("index.html", name="index", title="Главная")  # , menu=menu)
+
+
+# def download():
+#     urllib.request.urlretrieve("https://s8d6.turboimg.net/t1/95552122_404.jpg")
 
 
 @app.route("/about")
@@ -31,4 +36,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
