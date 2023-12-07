@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {{ super() }}
+
+{#    <label>#}
+{#        <select name="hhhhhhhhhh">#}
+{#            <option value="fffsssssss" selected="selected">ddddddddddddd</option>#}
+{#            <option value="';;;;khh">ho;ghopuhok</option>#}
+{#        </select>#}
+{#    </label>#}
+
+    <div class="text-align: center">
+    <table>
+        <tr>
+            <td id="col00" colspan="3" height="40"><a href={{ url_for("main_page") }}>{{ title }}</a></td>
+        </tr>
+
+        <tr>
+            <td id="col0" colspan="3" height="60">Программа для классификации месторождений нефти и газа</td>
+        </tr>
+
+        <tr>
+            <td id="col1">
+                <div class="TextInColumn">Колонка 1-1</div><br>
+                <div><a href={{ url_for("about_app_page") }}>О приложении</a></div>
+            </td>
+
+            <td id="col2">
+                <div>Колонка 2-1</div><br>
+                <div><a href="mailto:ogfc@mail.ru?subject=Вопрос по Классификатору">Написать письмо автору</a></div><br>
+                <div><a target="_blank" href="https://s8d6.turboimg.net/t1/95552122_404.jpg">Посмотреть картинку</a></div><br>
+                <div>Колонка 2-2</div>
+            </td>
+
+
+            <td id="col3">
+                <div class="TextInColumn">Колонка 3-1</div><br>
+                <div><a href={{ url_for("about_page") }}>О сайте</a></div>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+{% endblock %}
