@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# menu = ["Установка", "Первое приложение", "Обратная связь"]
+menu = ["Установка", "Первое приложение", "Обратная связь"]
 
 
 @app.route("/")
@@ -17,7 +17,7 @@ def about_page():
 
 @app.route("/application")
 def about_app_page():
-    return render_template("application.html", name="application", title="О приложении")  # , menu=menu)
+    return render_template("application.html", name="application", title="О приложении", menu=menu)
 
 
 @app.errorhandler(404)  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
