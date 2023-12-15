@@ -13,16 +13,18 @@
             <td id="col0" colspan="3" height="60">Содержимое страницы &laquo;{{ title }}&raquo;</td>
         </tr>
         <tr>
-            <td id="col_App" colspan="3" height="60">Описание приложение и внешний вид главного окна</td>
+            <td id="col_App" colspan="3" >
+                <ul>
+                    {% for m in menu -%}
+                        <li>{{m}}</li>
+                    {% endfor -%}
+                </ul>
+            </td>
         </tr>
     </table>
-        <ul>
-            {% for m in menu -%}
-                <li>{{m}}</li>
-            {% endfor -%}
-        </ul>
-    <hr />
+
     <br><br>
+
 
     <div class="linkToMain">
         <a title="Нажмите, чтобы перейти" href={{ url_for("main_page") }}>Вернуться на главную страницу</a></div>

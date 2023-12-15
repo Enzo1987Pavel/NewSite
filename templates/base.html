@@ -71,11 +71,13 @@
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
     }
     #col_App {
-        width: 20%; /* Ширина первой колонки */
-        background: rgba(67, 255, 0, 0.5); /* Цвет фона первой колонки */
-        padding: 10px;
-        border-radius: 10px 10px 10px 10px;
-        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+        align: left;
+        text-align: left;
+        {#width: 20%; /* Ширина первой колонки */#}
+        {#background: rgba(67, 255, 0, 0.5); /* Цвет фона первой колонки */#}
+        {#padding: 10px;#}
+        {#border-radius: 10px 10px 10px 10px;#}
+        {#box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);#}
     }
     .TextInColumn {
         font-weight: bold;
@@ -148,10 +150,12 @@
     }
 
     .footer {
+        border-top-width: 3px;
+        border-top: black;
         text-align: right;
         font-weight: bold;
         color: #005a9d;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         position: fixed;  /*absolute;*/ /* footer всегда в нижней части экрана */
         bottom: 0;
         width: 100%;
@@ -186,7 +190,7 @@
 {% endblock -%}
 
     <div class="footer">
-        <div style="margin-right: 10px">&copy;&nbsp;Павел Есаулов</div>
+        <div style="margin-right: 15px; border-top-style: solid;">&copy;&nbsp;Павел Есаулов</div>
     </div>
 
 </body>
