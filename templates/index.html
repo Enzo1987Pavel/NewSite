@@ -4,6 +4,14 @@
 {% block content %}
     {{ super() }}
 
+<style>
+    .topPage {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+   }
+</style>
+
     <div class="text-align: center">
     <table>
         <tr>
@@ -35,5 +43,7 @@
         </tr>
     </table>
     </div>
+
+    <a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/classificator/images/top_page.png" alt="top" width="36"; height="36";</a>
 
 {% endblock %}
