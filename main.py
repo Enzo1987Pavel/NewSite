@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-menu = ["Установка", "Первое приложение", "Обратная связь"]
+menu = ["Установка", "Описание приложение", "Обратная связь"]
 
 
 @app.route("/")
