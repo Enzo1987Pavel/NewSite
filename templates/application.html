@@ -19,19 +19,18 @@
     border-radius: 10px;
    }
 
-   /*ol {*/
-   /* убираем стандартную нумерацию */
-   /*list-style: none;*/
-    /*Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
-   /*counter-reset: li;*/
-   /* }*/
+   .mail_sup {
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+    cursor: default;
+   }
 
-   /* li:before {*/
-   /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
-   /*counter-increment: li;*/
-   /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
-   /*content: counters(li, ".") ". ";*/
-   /* }*/
+   .mail_sup:hover {
+    color: rgb(0, 0, 150);
+    text-decoration: underline;
+    cursor: pointer;
+   }
+
 </style>
 
     <div class="text-align: center">
@@ -45,11 +44,11 @@
         </tr>
         <tr>
             <td id="col_App" colspan="3" >
-                <ul style="font-size: 22px;">
+                <ul style="font-size: 20px;">
                     <li><a href="#Описание приложения">Описание приложения</a></li>
                     <li><a href="#Лицензионное соглашение">Лицензионное соглашение</a></li>
                     <li><a href="#Системные требования">Системные требования</a></li>
-                    <li><a href="#Особенности приложения">Особенности приложения</a></li>
+                    <li><a href="#Ранние версии">Ранние версии</a></li>
                 </ul>
                 <p id="Описание приложения" style="font-size: 22px; text-align: center; background: rgba(67, 255, 0, 0.5); border-radius: 10px 10px 10px 10px; padding: 10px; margin-bottom: 22px; font-weight: bold;">Описание приложения<br>
                     <div id="TextAbout" style="font-size: 18px; text-align: justify; line-height: 1.3;">
@@ -120,7 +119,7 @@
                             <li>Техническая поддержка
                                 <ol>
                                      <li>Техническая поддержка оказывается при условии, что у Вас установлена актуальная версия оригинальной сборки программы.</li>
-                                     <li>Техническую поддержку можно получить, отправив письмо на e-mail: <a href="mailto:ogfc@mail.ru?subject=Вопрос по Классификатору 5.4";>ogfc@mail.ru</a></li>
+                                     <li>Техническую поддержку можно получить, отправив письмо на e-mail: <a href="mailto:ogfc@mail.ru?subject=Вопрос по Классификатору 5.4"; class="mail_sup">ogfc@mail.ru</a> или перейти по ссылке на страницу <a href={{ url_for("about_page") }} class="mail_sup">«О&nbsp;сайте»</a> и отсканировать QR-код.</li>
                                 </ol>
                         </ol>
                     </div>
@@ -128,7 +127,7 @@
 
                 <p id="Системные требования" style="font-size: 22px; text-align: center; background: rgba(67, 255, 0, 0.5); border-radius: 10px 10px 10px 10px; padding: 10px; font-weight: bold;">Системные требования<br>
                     <div id="TextAbout" style="font-size: 18px; text-align: justify; line-height: 1.3;">
-                        Для стабильной работы приложения необходимы следующие системные требования:<br>
+                        <center>Для стабильной работы приложения необходимы следующие системные требования:</center><br>
 
                         <u>Минимальные системные требования:</u>
                         <ul>
@@ -152,8 +151,11 @@
                     </div>
                 </p>
 
-                <p id="Особенности приложения" style="font-size: 22px; text-align: center; background: rgba(67, 255, 0, 0.5); border-radius: 10px 10px 10px 10px; padding: 10px; margin-bottom: 22px; font-weight: bold;">Особенности приложения<br>
+                <p id="Ранние версии" style="font-size: 22px; text-align: center; background: rgba(67, 255, 0, 0.5); border-radius: 10px 10px 10px 10px; padding: 10px; margin-bottom: 22px; font-weight: bold;">Ранние версии<br>
                     <div id="TextAbout" style="font-size: 18px; text-align: justify; line-height: 1.3;">
+                        Последнюю версию приложения можно скачать по ссылке ниже:<br>
+                        <center><a href="/classificator/files/Классификатор_5.4.1.zip" download="Классификатор_5.4.1.zip"; class="mail_sup">Классификатор 5.4.1</a> (21.09.2023)</center><br>
+                        Здесь будет дополняться список ранних версий приложения...
 
                     </div>
                 </p>
@@ -163,7 +165,7 @@
     </table>
 
 
-    <a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/classificator/images/top_page.png" alt="top" width="36"; height="36";</a>
+    <a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/classificator/images/top_page.png" alt="top" width="36"; height="36";/></a>
 
 
     <div class="linkToMain">

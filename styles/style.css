@@ -47,11 +47,11 @@
     #col_App {
         align: left;
         text-align: left;
-        /*{#width: 20%; !* Ширина первой колонки *!#}*/
-        /*{#background: rgba(67, 255, 0, 0.5); !* Цвет фона первой колонки *!#}*/
-        /*{#padding: 10px;#}*/
-        /*{#border-radius: 10px 10px 10px 10px;#}*/
-        /*{#box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);#}*/
+        {#width: 20%; /* Ширина первой колонки */#}
+        {#background: rgba(67, 255, 0, 0.5); /* Цвет фона первой колонки */#}
+        {#padding: 10px;#}
+        {#border-radius: 10px 10px 10px 10px;#}
+        {#box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);#}
     }
     .TextInColumn {
         font-weight: bold;

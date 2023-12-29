@@ -6,9 +6,21 @@
 
 <style>
     .topPage {
-    position: fixed;
-    right: 10px;
-    bottom: 30px;
+        position: fixed;
+        right: 10px;
+        bottom: 30px;
+   }
+
+   .coll1_text {
+        font-size: 20px;
+   }
+
+    .coll2_text {
+        font-size: 18px;
+   }
+
+   .coll3_text {
+        font-size: 20px;
    }
 </style>
 
@@ -24,26 +36,22 @@
 
         <tr>
             <td id="col1">
-                <div class="TextInColumn">Колонка 1-1</div><br>
-                <div><a href={{ url_for("about_app_page") }}>О приложении</a></div>
+                <div><a href={{ url_for("about_app_page") }} class="coll1_text">О приложении</a></div>
             </td>
 
             <td id="col2">
-                <div>Колонка 2-1</div><br>
-                <div><a target="_blank" href="/classificator/images/404.jpg">Посмотреть картинку</a></div><br>
-                <div><a href="/classificator/images/404.jpg" download="404.jpg">Скачать картинку</a></div><br>
-                <div>Колонка 2-2</div>
+                <div><a target="_blank" href="/classificator/images/404.jpg"; class="coll2_text">Посмотреть картинку</a></div><br>
+                <div><img src="/classificator/images/Logo_App.png" alt="top" width="16"; height="16";/><a href="/classificator/files/Классификатор_5.4.1.zip" download="Классификатор_5.4.1.zip"; class="coll1_text"; style="margin-left: 8px;">Скачать приложение</a></div>
             </td>
 
 
             <td id="col3">
-                <div class="TextInColumn">Колонка 3-1</div><br>
-                <div><a href={{ url_for("about_page") }}>О сайте</a></div>
+                <div><a href={{ url_for("about_page") }} class="coll3_text">О сайте</a></div>
             </td>
         </tr>
     </table>
     </div>
 
-    <a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/classificator/images/top_page.png" alt="top" width="36"; height="36";</a>
+    <a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/classificator/images/top_page.png" alt="top" width="36"; height="36";/></a>
 
 {% endblock %}
