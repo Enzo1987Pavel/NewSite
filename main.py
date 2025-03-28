@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -17,6 +19,8 @@ def about_page():
 def about_app_page():
     return render_template("application.html", name="application", title="О приложении")
 
+# def not_download():
+#     if os
 
 @app.errorhandler(404)  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
 def page_404(e):
