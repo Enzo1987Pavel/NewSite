@@ -1,13 +1,24 @@
 import os
 
 from flask import Flask, render_template
+# from datetime import datetime, time
+
 
 app = Flask(__name__)
 
 
+# def format_datetime(value, format='%B %d, %Y %H:%M'):
+#     """Custom filter for formatting datetime objects."""
+#     if value is None:
+#         return ""
+#     return value.strftime(format)
+
+
 @app.route("/")
 def main_page():
-    return render_template("index.html", name="index", title="Главная")  # , menu=menu)
+    # current_time = datetime.now()
+        # return render_template('base.html', current_time=current_time)
+    return render_template("index.html", name="index", title="Главная")  # , current_time=current_time)  # , menu=menu)
 
 
 @app.route("/about")

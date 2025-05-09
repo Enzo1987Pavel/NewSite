@@ -46,9 +46,10 @@
 </style>
 
     <div class="text-align: center">
-    <table>
+
+        <table>
         <tr>
-            <td id="col00" colspan="3" height="40"><a href={{ url_for("main_page") }}>{{ title }}</a></td>
+            <td id="col00" colspan="3" height="40"><a href={{ url_for("main_page") }} ; title="Переход на главную страницу">{{ title }}</a></td>
         </tr>
 
         <tr>
@@ -57,16 +58,16 @@
 
         <tr>
             <td id="col1">
-                <div class="coll1_text"><a href={{ url_for("about_app_page") }} >О приложении</a></div>
+                <div class="coll1_text"><a href={{ url_for("about_app_page") }} ; title="Информация о приложении">О приложении</a></div>
             </td>
 
             <td id="col2">
-                <div><a target="_blank" href="/static/images/404.jpg" class="coll2_text">Посмотреть картинку</a></div><br>
-                <div><img src="/static/images/Logo_App.png" alt="top" width="16" ; height="16" ;/><a href="/static/files/Классификатор_5.4.1.zip" download="Классификатор_5.4.1.zip" ; class="coll1_text" ; style="margin-left: 8px;">Скачать приложение</a></div>
+                <div><a target="_blank" href="/static/images/404.jpg" class="coll2_text" ; title="Открыть картинку в новом окне">Посмотреть картинку</a></div><br>
+                <div><img src="/static/images/Logo_App.png" alt="top" width="16" ; height="16" ;/><a href="/static/files/Классификатор_5.4.1.zip" download="Классификатор_5.4.1.zip"; class="coll1_text"; style="margin-left: 8px;"; title="Скачать приложение">Скачать приложение</a></div>
             </td>
 
             <td id="col3">
-                <div class="coll3_text"> <a href={{ url_for("about_page") }} >О сайте</a></div>
+                <div class="coll3_text"> <a href={{ url_for("about_page") }} ; title="Информация о сайте">О сайте</a></div>
             </td>
         </tr>
     </table>
