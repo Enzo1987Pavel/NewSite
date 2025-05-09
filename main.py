@@ -16,8 +16,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def main_page():
-    # current_time = datetime.now()
-        # return render_template('base.html', current_time=current_time)
     return render_template("index.html", name="index", title="Главная")  # , current_time=current_time)  # , menu=menu)
 
 
