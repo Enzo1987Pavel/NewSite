@@ -1,3 +1,6 @@
 # created by virtualenv automatically
 venv/
 .idea/
+!/llll.py
+
+!/templates/test.html

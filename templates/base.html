@@ -26,6 +26,7 @@
 
 </head>
 
+
 <!--no selection
 <script type="text/javascript">
 	document.ondragstart = noselect;
@@ -35,11 +36,52 @@
 </script>
 -->
 
+    <script>
+        function updateLiveTime() {
+            const now = new Date();
+            const options = {
+                weekday: "short",
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            };
+            document.getElementById("live-time").textContent = now.toLocaleString("ru-RU", options);
+          }
+        setInterval(updateLiveTime, 100);
+        updateLiveTime();
+    </script>
+
 <body>
 
-    <div class="header">
-        <div style="margin-top: 5px; padding-top: 5px; margin-right: 10px; text-align: right;">Текущие дата и время: </div>
-    </div>
+    <style>
+        .time_now {
+            text-align: right;
+            font-weight: bolder;
+            margin-top: 5px;
+            margin-right: 10px;
+            padding-top: 5px;
+            color: rgb(41, 74, 108);
+        }
+        .time_now:hover::after {
+            content: attr(data-title); /* Выводим текст */
+            position: absolute; /* Абсолютное позиционирование */
+            left: 90%;
+            top: 4%; /* Положение подсказки */
+            z-index: 1; /* Отображаем подсказку поверх других элементов */
+            background: rgba(255, 255, 230, 0.85); /* Полупрозрачный цвет фона */
+            font-family: "Times New Roman", Arial, sans-serif; /* Гарнитура шрифта */
+            font-size: 13px; /* Размер текста подсказки */
+            color: #002036;
+            padding: 5px; /* Поля */
+            border: 1px solid #333; /* Параметры рамки */
+            border-radius: 5px;
+        }
+    </style>
+
+    <div id="live-time" class="time_now" data-title="Текущие дата и время"></div>
 
 {% block content -%}
     {%- block mainmenu -%}
