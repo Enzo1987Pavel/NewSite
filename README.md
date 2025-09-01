@@ -1,2 +1,2 @@
-[![version](https://img.shields.io/badge/Python-v_3.11-informational/?style=social&logo=Python)]("<a target="_blank" href="https://python.org"></a>""")
+[![version](https://img.shields.io/badge/Python-v_3.11-informational/?style=social&logo=Python)](href="https://python.org" "Ссылка на сайт Python.org (открывать в новой вкладке)")
 ### New Site for "Classificator"
