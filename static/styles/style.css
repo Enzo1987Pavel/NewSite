@@ -1,3 +1,7 @@
+    html {
+            scroll-behavior: smooth;
+    }
+
     table {
         alignment: center;
         margin: auto;  /* center of the table */
