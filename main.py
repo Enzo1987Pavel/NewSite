@@ -34,9 +34,9 @@ def page_404(e):
     return render_template("error_404.html", e=e), 404
 
 
-@app.route("/test")  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
-def test_page():
-    return render_template("test.html", title="Test page")
+# @app.route("/test")  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
+# def test_page():
+#     return render_template("test.html", title="Test page")
 
 
 @app.errorhandler(500)  # Форма при проблемах с сервером, внутренней ошибке в программе
