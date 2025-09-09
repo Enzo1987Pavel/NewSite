@@ -36,6 +36,20 @@
 
 </style>
 
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
     <div class="text-align: center">
 
     <table>

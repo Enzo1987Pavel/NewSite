@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
     <head>
         <meta http-equiv="content-type" content="text/html" charset="UTF-8">
@@ -121,13 +121,6 @@
     {#  height: 40px;#}
     {#  fill: currentcolor;#}
     {#}#}
-
-    @media (hover: hover) and (pointer: fine) {
-      .btn-up:hover {
-        background-color: #155580;
-      }
-        title: "Наверх страницы";
-    }
     </style>
 
     <div id="live-time" class="time_now" data-title="Текущие дата и время"></div>
@@ -162,50 +155,28 @@
         </svg>
       </div>
 
-  <script>
+<script>
     const btnUp = {
       el: document.querySelector('.btn-up'),
-      scrolling: false,
-      fadeIn() {
-        if (this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
-          this.el.classList.remove('btn-up_hide');
-          this.el.classList.add('btn-up_hiding');
-          window.setTimeout(() => {
-            this.el.classList.remove('btn-up_hiding');
-          }, 300);
-        }
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
       },
-      fadeOut() {
-        if (!this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
-          this.el.classList.add('btn-up_hiding');
-          window.setTimeout(() => {
-            this.el.classList.add('btn-up_hide');
-            this.el.classList.remove('btn-up_hiding');
-          }, 300);
-        }
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
       },
       addEventListener() {
-        // при прокрутке окна (window)
+        // при прокрутке содержимого страницы
         window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
           const scrollY = window.scrollY || document.documentElement.scrollTop;
-          if (this.scrolling && scrollY > 0) {
-            return;
-          }
-          this.scrolling = false;
-          // если пользователь прокрутил страницу более чем на 200px
-          if (scrollY > 200) {
-            // сделаем кнопку .btn-up видимой
-            this.fadeIn();
-          } else {
-            // иначе скроем кнопку .btn-up
-            this.fadeOut();
-          }
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
         });
         // при нажатии на кнопку .btn-up
         document.querySelector('.btn-up').onclick = () => {
-          this.scrolling = true;
-          this.fadeOut();
-          // переместиться в верхнюю часть страницы
+          // переместим в начало страницы
           window.scrollTo({
             top: 0,
             left: 0,
@@ -216,7 +187,9 @@
     }
 
     btnUp.addEventListener();
-  </script>
+</script>
+
+
 
      <div class="footer">
         <div style="margin-right: 5px; padding-top: 5px;">©&nbsp;Павел Есаулов</div>
