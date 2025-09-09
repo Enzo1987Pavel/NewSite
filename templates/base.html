@@ -89,38 +89,38 @@
     {#  min-height: 2000px;#}
     {#}#}
 
-    .btn-up {
-      position: fixed;
-      background-color: #002f50;
-      right: 10px;
-      bottom: 30px;
-      border-radius: 25px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
-      color: #fff;
-      width: 40px;
-      height: 40px;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .btn-up_hide {
-      display: none;
-    }
-
-    .btn-up_hiding {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-
-    .btn-up-icon {
-      width: 40px;
-      height: 40px;
-      fill: currentcolor;
-    }
+    {#.btn-up {#}
+    {#  position: fixed;#}
+    {#  background-color: #002f50;#}
+    {#  right: 10px;#}
+    {#  bottom: 30px;#}
+    {#  border-radius: 25px;#}
+    {#  cursor: pointer;#}
+    {#  display: flex;#}
+    {#  align-items: center;#}
+    {#  justify-content: center;#}
+    {#  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;#}
+    {#  color: #fff;#}
+    {#  width: 40px;#}
+    {#  height: 40px;#}
+    {#  opacity: 1;#}
+    {#  transform: translateY(0);#}
+    {#}#}
+    {##}
+    {#.btn-up_hide {#}
+    {#  display: none;#}
+    {#}#}
+    {##}
+    {#.btn-up_hiding {#}
+    {#  opacity: 0;#}
+    {#  transform: translateY(100px);#}
+    {#}#}
+    {##}
+    {#.btn-up-icon {#}
+    {#  width: 40px;#}
+    {#  height: 40px;#}
+    {#  fill: currentcolor;#}
+    {#}#}
 
     @media (hover: hover) and (pointer: fine) {
       .btn-up:hover {
@@ -148,7 +148,6 @@
 {% endblock -%}
 
 
-    <body>
       <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="arrow-up-short" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
@@ -156,8 +155,9 @@
       </svg>
 
 
-      <div class="btn-up btn-up_hide" title="Прокрутить к началу страницы">
-        <svg class="btn-up-icon" role="img" aria-label="Прокрутить страницу к началу">
+
+      <div class="btn-up btn-up_hide" title="Наверх страницы">
+        <svg class="btn-up-icon" role="img" aria-label="Наверх страницы">
           <use xlink:href="#arrow-up-short"></use>
         </svg>
       </div>
