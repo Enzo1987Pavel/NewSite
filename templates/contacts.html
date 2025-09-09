@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ super() }}
+
+<style>
+    .topPage {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+   }
+</style>
+
+    <div class="text-align: center">
+    <table>
+        <tr>
+            <td id="col00" colspan="3" height="40"><a title="переход на главную страницу" href={{ url_for("main_page") }}>Главная</a> \
+            <a href={{ url_for("contacts_page") }}> {{ title }}</a></td>
+        </tr>
+        <tr>
+            <td id="col0" colspan="3" height="60">Способы связаться с нами в &laquo;{{ title }}&raquo;</td>
+        </tr>
+    </table>
+
+
+
+    <div class="linkToMain">
+        <a title="На главную страницу" href={{ url_for("main_page") }}><img src="/static/images/main_64.png" alt="home" width="36" ; height="36" ;/></a>
+    </div>
+
+{% endblock %}

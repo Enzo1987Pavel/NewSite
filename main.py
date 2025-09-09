@@ -29,12 +29,17 @@ def about_app_page():
     return render_template("application.html", name="application", title="О приложении")
 
 
+@app.route("/contacts")
+def contacts_page():
+    return render_template("contacts.html", name="contacts", title="Контакты")
+
+
 @app.errorhandler(404)  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
 def page_404(e):
     return render_template("error_404.html", e=e), 404
 
 
-# @app.route("/test")  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
+# @app.route("/contacts/test")  # Форма для вывода ошибка при неправильном URL-адресе, если страница не будет найдена
 # def test_page():
 #     return render_template("test.html", title="Test page")
 

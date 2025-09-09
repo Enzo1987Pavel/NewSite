@@ -1,7 +1,3 @@
-    html {
-            scroll-behavior: smooth;
-    }
-
     table {
         alignment: center;
         margin: auto;  /* center of the table */
@@ -77,6 +73,14 @@
         box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
     }
 
+    #col4_1 {
+        width: 20%; /* Ширина четвертой колонки */
+        background: #e8ae08; /* Цвет фона четвертой колонки */
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0.3, 0.3, 0.5);
+    }
+
     #col_email {
         text-align: right;
         width: 50%;
@@ -104,7 +108,7 @@
         text-decoration: none;
     }
     a:hover {
-        color: rgb(0, 43, 73);
+        color: rgb(0, 68, 115);
         cursor: pointer;
         text-decoration: underline;
     }
@@ -115,6 +119,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -144,3 +149,37 @@
     .zoom-effect:hover {
         transform: scale(2);
     }
+
+    .btn-up {
+      position: fixed;
+      background-color: #002f50;
+      right: 10px;
+      bottom: 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn-up_hide {
+      display: none;
+    }
+
+    .btn-up_hiding {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    .btn-up-icon {
+      width: 40px;
+      height: 40px;
+      fill: currentcolor;
+    }
+
