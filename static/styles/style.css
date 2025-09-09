@@ -106,12 +106,18 @@
         cursor: default;
         color: rgb(0, 43, 73);
         text-decoration: none;
+        transition: color 0.3s ease-in-out;
     }
     a:hover {
         color: rgb(0, 68, 115);
         cursor: pointer;
         text-decoration: underline;
     }
+
+/*    a:link { color: brown; }  */
+/*a:visited { color: red; }  */
+/*a:hover { color: green; }  */
+/*a:active { color: cyan; }  */
 
     html {
         background: url(/static/images/bg_01.jpg) no-repeat center center fixed;
@@ -151,6 +157,13 @@
     }
 
     .btn-up {
+        /*font-size: 3.5em;*/
+        /*color: darkmagenta;*/
+        animation: shadow 2s infinite ease-in-out;
+    }
+
+
+    .btn-up {
       position: fixed;
       background-color: #002f50;
       right: 10px;
@@ -162,10 +175,20 @@
       justify-content: center;
       transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
       color: #fff;
-      width: 40px;
+      width: 120px;
       height: 40px;
       opacity: 1;
       transform: translateY(0);
+        z-index: 300;
+    }
+
+    /*Кнопка наверх и надпись после стрелки*/
+    .btn-up:after{
+        content: "Наверх";
+        font-family: "Times New Roman", Arial, sans-serif; /* Гарнитура шрифта */
+        font-size: 16px; /* Размер текста подсказки */
+        padding: 5px; /* Поля */
+        text-align: right;
     }
 
     .btn-up_hide {
@@ -183,3 +206,10 @@
       fill: currentcolor;
     }
 
+    /*a {*/
+
+    /*}*/
+
+    /*a:hover {*/
+
+    /*}*/
