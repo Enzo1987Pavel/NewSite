@@ -84,43 +84,6 @@
             border: 1px solid #333; /* Параметры рамки */
             border-radius: 5px;
         }
-
-    {#    body {#}
-    {#  min-height: 2000px;#}
-    {#}#}
-
-    {#.btn-up {#}
-    {#  position: fixed;#}
-    {#  background-color: #002f50;#}
-    {#  right: 10px;#}
-    {#  bottom: 30px;#}
-    {#  border-radius: 25px;#}
-    {#  cursor: pointer;#}
-    {#  display: flex;#}
-    {#  align-items: center;#}
-    {#  justify-content: center;#}
-    {#  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;#}
-    {#  color: #fff;#}
-    {#  width: 40px;#}
-    {#  height: 40px;#}
-    {#  opacity: 1;#}
-    {#  transform: translateY(0);#}
-    {#}#}
-    {##}
-    {#.btn-up_hide {#}
-    {#  display: none;#}
-    {#}#}
-    {##}
-    {#.btn-up_hiding {#}
-    {#  opacity: 0;#}
-    {#  transform: translateY(100px);#}
-    {#}#}
-    {##}
-    {#.btn-up-icon {#}
-    {#  width: 40px;#}
-    {#  height: 40px;#}
-    {#  fill: currentcolor;#}
-    {#}#}
     </style>
 
     <div id="live-time" class="time_now" data-title="Текущие дата и время"></div>
@@ -141,19 +104,7 @@
 {% endblock -%}
 
 
-      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="arrow-up-short" viewBox="0 0 16 16" >
-          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
-        </symbol>
-      </svg>
-
-
-
-      <div class="btn-up btn-up_hide" title="Наверх страницы">
-        <svg class="btn-up-icon" role="img" aria-label="Наверх страницы">
-          <use xlink:href="#arrow-up-short"></use>
-        </svg>
-      </div>
+      <div class="btn-up btn-up_hide" title="Наверх страницы">&#8679;&nbsp;Наверх</div>
 
 <script>
     const btnUp = {
@@ -192,7 +143,7 @@
 
 
      <div class="footer">
-        <div style="margin-right: 5px; padding-top: 5px;">©&nbsp;Павел Есаулов</div>
+        <div style="margin-right: 5px; padding-top: 5px;">&copy;&nbsp;Павел Есаулов</div>
     </div>
     </body>
 </body>
