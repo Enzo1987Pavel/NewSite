@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {{ super() }}
+
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+    }
+
+    .topPage {
+        position: fixed;
+        right: 10px;
+        bottom: 30px;
+   }
+
+   .coll1_text {
+        font-size: 20px;
+   }
+
+    .coll2_text {
+        font-size: 18px;
+   }
+
+   .coll3_text {
+        font-size: 20px;
+   }
+
+   .coll4_1_text {
+        font-size: 20px;
+   }
+
+   #popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+}
+
+    #popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+</style>
+    <div class="text-align: center">
+        <table>
+        <tr>
+            <td id="col00" colspan="3" height="40"><a href={{ url_for("main_page") }} ; title="Переход на главную страницу">{{ title }}</a></td>
+        </tr>
+
+        <tr>
+            <td id="col0" colspan="3" height="60">Программа для классификации месторождений нефти и газа</td>
+        </tr>
+
+        <tr>
+            <td id="col1">
+{#                <div class="coll1_text"><a href={{ url_for("about_app_page") }} ; title="Информация о приложении">О приложении</a></div>#}
+            </td>
+
+            <td id="col2">
+                <div><a target="_blank" href="/static/images/404.jpg" class="coll2_text" ; title="Открыть картинку в новом окне">Посмотреть картинку</a></div><br>
+                <div><img src="/static/images/Logo_App.png" alt="top" width="16" ; height="16" ;/><a href="/static/files/Классификатор_5.4.1.zip" download="Классификатор_5.4.1.zip"; class="coll1_text"; style="margin-left: 8px;"; title="Скачать приложение">Скачать приложение</a></div>
+            </td>
+
+            <td id="col3">
+{#                <div class="coll3_text"> <a href={{ url_for("about_page") }} ; title="Информация о сайте">О сайте</a></div>#}
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td id="col4_1">
+                <div class="coll4_1_text"> <a href={{ url_for("contacts_page") }} ; title="Контакты">Контакты</a></div>
+            </td>
+        </tr>
+
+    </table>
+    </div>
+
+
+    <!--<a href="#" title="Вернуться к началу страницы" class="topPage"><img src="/static/images/top_page.png" alt="top" width="36" ; height="36" ;/></a>-->
+
+
+{% endblock %}
+

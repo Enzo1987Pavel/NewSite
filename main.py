@@ -19,6 +19,11 @@ def main_page():
     return render_template("index.html", name="index", title="Главная")  # , menu=menu)
 
 
+@app.route("/registration")
+def registration_page():
+    return render_template("registration.html", name="registration", title="Вход и регистрация")  # , menu=menu)
+
+
 @app.route("/about")
 def about_page():
     return render_template("about.html", name="about", title="О сайте")  # , menu=menu)
@@ -50,4 +55,5 @@ def error_500(e):
 
 
 if __name__ == "__main__":
+    app.route("/registration")
     app.run(port=5000, host="127.0.0.1")
