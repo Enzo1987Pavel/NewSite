@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, redirect
 from datetime import datetime, time
 
 
@@ -19,9 +19,20 @@ def main_page():
     return render_template("index.html", name="index", title="Главная")  # , menu=menu)
 
 
-@app.route("/registration")
-def registration_page():
-    return render_template("registration.html", name="registration", title="Вход и регистрация")  # , menu=menu)
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if username in users and users[username] == password:
+            # Аутентификация успешна
+            return redirect(url_for('dashboard'))
+        else:
+            # Аутентификация не удалась
+            return render_template('login.html', error='Неверное имя пользователя или пароль')
+
+    # Если это GET-запрос, просто отображаем страницу входа
+    return render_template('login.html')
 
 
 @app.route("/about")
@@ -55,5 +66,4 @@ def error_500(e):
 
 
 if __name__ == "__main__":
-    app.route("/registration")
     app.run(port=5000, host="127.0.0.1")
